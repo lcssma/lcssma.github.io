@@ -1,7 +1,7 @@
 {
   "scripts": {
     "clean": "npx rimraf docs",
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./docs/output.css --minify && npx copyfiles -u 1 src/index.html docs && npx copyfiles -u 2 src/images/**/* docs/images",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./docs/output.css --minify && npx copyfiles -u 1 src/index.html docs && npx copyfiles -u 1 src/scripts.js docs && npx copyfiles -u 2 src/images/**/* docs/images",
     "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   },
   "dependencies": {
