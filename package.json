@@ -1,10 +1,15 @@
 {
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css",
+    "clean": "npx rimraf docs",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./docs/output.css --minify && npx copyfiles -u 1 src/index.html docs && npx copyfiles -u 2 src/images/**/* docs/images",
     "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "rimraf": "^6.1.2"
   }
 }
