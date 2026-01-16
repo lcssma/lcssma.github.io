@@ -4,19 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
   <link href="./styles/output.css" rel="stylesheet">
   <script src="./scripts/main.js" defer></script>
   <title>lcssma</title>
 </head>
 
 <body>
+
   <!-- Hero Section -->
-  <section id="hero" class="bg-blue-950">
+  <section id="hero" class="relative overflow-hidden">
     <div class="container max-w-6xl mx-auto p-6">
+
+      <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+        <source src="images/coding-hero.mp4">
+      </video>
+
+      <div class="absolute inset-0 bg-gray-900/90"></div>
+
       <!-- Menu/Logo Container -->
-      <nav class="flex items-center justify-between text-white">
+      <nav class="relative z-30 flex items-center justify-between text-white">
         <!-- Logo -->
-        <p class="font-bold tracking-wider text-2xl">lcssma</p>
+        <p class="font-bold text-2xl">lcssma</p>
         <!-- Menu -->
         <div class="hidden md:flex md:space-x-8">
           <div class="group">
@@ -36,6 +47,7 @@
             <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
           </div>
         </div>
+
         <!-- Hamburger Button -->
         <div class="md:hidden">
           <button id="menu-btn" type="button" class="z-40 block hamburger focus:outline-none">
@@ -48,7 +60,7 @@
 
       <!-- Mobile Menu -->
       <div id="menu"
-        class="absolute hidden top-0 bottom-0 left-0 flex-col w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white bg-gray-800">
+        class="absolute z-20 hidden top-0 bottom-0 left-0 flex-col w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white bg-gray-600">
         <a href="#projects" class="menu-link hover:text-blue-500">Proyectos</a>
         <a href="#skills" class="menu-link hover:text-blue-500">Habilidades</a>
         <a href="#about" class="menu-link hover:text-blue-500">Sobre mí</a>
@@ -56,12 +68,13 @@
       </div>
 
       <div
-        class="flex flex-col space-y-10 items-center mt-20 mb-10 p-4 text-xl italic text-gray-200 md:text-3xl md:flex md:flex-row md:justify-around md:items-start md:space-x-10 md:space-y-0">
+        class="relative z-10 flex flex-col space-y-10 items-center mt-20 mb-10 p-4 text-xl italic text-gray-200 md:text-3xl md:flex md:flex-row md:justify-around md:items-start md:space-x-10 md:space-y-0">
         <div>
           <img src="images/website-program-svgrepo-com-dark.svg" alt="" class="max-w-40 md:max-w-3xs">
         </div>
         <div class="text-center max-w-xl md:text-left">Construyo interfaces web modernas, rápidas y responsive</div>
       </div>
+
     </div>
   </section>
 
@@ -69,6 +82,7 @@
   <section id="projects">
     <!-- Projects Container -->
     <div class="container max-w-6xl mx-auto my-5 p-6 text-gray-900">
+
       <!-- Projects Header -->
       <div class="flex justify-center mb-10 md:justify-start">
         <h2 class="text-2xl font-bold text-center md:text-left">
@@ -79,18 +93,41 @@
       <!-- Items Container -->
       <div class="flex flex-col space-y-6 text-xl text-center md:flex-row md:space-y-0 md:space-x-10 md:text-left">
         <!-- Item 1 -->
-        <div class="group overflow-hidden md:w-1/3">
-          <img src="images/web-app.png" alt="" class="duration-400 group-hover:scale-105 hover:cursor-pointer">
+        <div class="md:w-1/3">
+          <a href="https://lcssma.github.io/tailwind-clipboard/" target="_blank">
+            <div class="group relative overflow-hidden">
+              <img src="images/projects/clipboard.png" alt=""
+                class="block scale-105 duration-400 group-hover:scale-120">
+              <div
+                class="absolute inset-0 bg-linear-to-b from-transparent to-gray-200 group-hover:from-gray-5 group-hover:to-transparent group-hover:opacity-70 group-hover:cursor-pointer">
+              </div>
+            </div>
+          </a>
           <h5>Clipboard</h5>
         </div>
         <!-- Item 2 -->
-        <div class="group overflow-hidden md:w-1/3">
-          <img src="images/web-app.png" alt="" class="duration-400 group-hover:scale-105 hover:cursor-pointer">
+        <div class="md:w-1/3">
+          <a href="https://lcssma.github.io/tailwind-loopstudios/" target="_blank">
+            <div class="group relative overflow-hidden">
+              <img src="images/projects/loopstudios.png" alt=""
+                class="block scale-105 duration-400 group-hover:scale-120">
+              <div
+                class="absolute inset-0 bg-linear-to-b from-transparent to-gray-200 group-hover:from-gray-5 group-hover:to-transparent group-hover:opacity-70 group-hover:cursor-pointer">
+              </div>
+            </div>
+          </a>
           <h5>Loop Studios</h5>
         </div>
         <!-- Item 3 -->
-        <div class="group overflow-hidden md:w-1/3">
-          <img src="images/web-app.png" alt="" class="duration-400 group-hover:scale-105 hover:cursor-pointer">
+        <div class="md:w-1/3">
+          <a href="https://lcssma.github.io/tailwind-shortly/" target="_blank">
+            <div class="group relative overflow-hidden">
+              <img src="images/projects/shortly.png" alt="" class="block scale-105 duration-400 group-hover:scale-120">
+              <div
+                class="absolute inset-0 bg-linear-to-b from-transparent to-gray-200 group-hover:from-gray-5 group-hover:to-transparent group-hover:opacity-70 group-hover:cursor-pointer">
+              </div>
+            </div>
+          </a>
           <h5>Shortly</h5>
         </div>
       </div>
@@ -99,21 +136,40 @@
       <div
         class="flex flex-col space-y-6 text-center text-xl md:flex-row md:space-y-0 md:space-x-10 md:text-left mt-10">
         <!-- Item 1 -->
-        <div class="group overflow-hidden md:w-1/3">
-          <a href="https://lcssma.github.io/tailwind-testymonies-grid/" target="_blank">
-            <img src="images/proyecto-testimonios.png" alt=""
-              class="duration-400 group-hover:scale-105 hover:cursor-pointer">
+        <div class="md:w-1/3">
+          <a href="https://lcssma.github.io/tailwind-testimonies-grid/" target="_blank">
+            <div class="group relative overflow-hidden ">
+              <img src="images/projects/testimonies.png" alt=""
+                class="block scale-105 duration-400 group-hover:scale-120">
+              <div
+                class="absolute inset-0 bg-linear-to-b from-transparent to-gray-200 group-hover:from-gray-5 group-hover:to-transparent group-hover:opacity-70 group-hover:cursor-pointer">
+              </div>
+            </div>
           </a>
           <h5>Testimonies</h5>
         </div>
         <!-- Item 2 -->
-        <div class="group overflow-hidden md:w-1/3">
-          <img src="images/web-app.png" alt="" class="duration-400 group-hover:scale-105 hover:cursor-pointer">
+        <div class="md:w-1/3">
+          <a href="https://lcssma.github.io/tailwind-testimonies-grid/" target="_blank">
+            <div class="group relative overflow-hidden">
+              <img src="images/projects/fylo.png" alt="" class="block scale-105 duration-400 group-hover:scale-120">
+              <div
+                class="absolute inset-0 bg-linear-to-b from-transparent to-gray-200 group-hover:from-gray-5 group-hover:to-transparent group-hover:opacity-70 group-hover:cursor-pointer">
+              </div>
+            </div>
+          </a>
           <h5>Fylo</h5>
         </div>
         <!-- Item 3 -->
-        <div class="group overflow-hidden md:w-1/3">
-          <img src="images/web-app.png" alt="" class="duration-400 group-hover:scale-105 hover:cursor-pointer">
+        <div class="md:w-1/3">
+          <a href="https://lcssma.github.io/tailwind-testimonies-grid/" target="_blank">
+            <div class="group relative overflow-hidden">
+              <img src="images/projects/bookmark.png" alt="" class="block scale-105 duration-400 group-hover:scale-120">
+              <div
+                class="absolute inset-0 bg-linear-to-b from-transparent to-gray-200 group-hover:from-gray-5 group-hover:to-transparent group-hover:opacity-70 group-hover:cursor-pointer">
+              </div>
+            </div>
+          </a>
           <h5>Bookmark</h5>
         </div>
       </div>
@@ -134,26 +190,26 @@
 
       <!-- Items Container -->
       <div
-        class="flex flex-col items-center justify-between space-y-6 text-center md:flex-row md:space-y-0 md:space-x-10 md:text-left md:px-10">
+        class="flex flex-col items-center justify-between space-y-6 text-center md:flex-row md:space-y-0 md:space-x-8 md:text-left md:px-10 md:max-w-4xl md:mx-auto">
         <!-- Item 1 -->
-        <div class="flex flex-col items-center space-y-5">
+        <div class="flex flex-col items-center space-y-4">
           <img src="images/js-svgrepo-com.svg" alt="" class="w-28 h-28">
-          <h5>JavaScript</h5>
-          <p>Interactividad y lógica para experiencias web dinámicas.</p>
+          <h5 class="font-semibold text-gray-800">JavaScript</h5>
+          <p class="text-sm text-gray-600 self-center ">Interactividad y lógica para experiencias web dinámicas.</p>
         </div>
         <!-- Item 2 -->
-        <div class="flex flex-col items-center space-y-5">
+        <div class="flex flex-col items-center space-y-4">
           <img src="images/tailwind-svgrepo-com.svg" alt="" class="w-28 h-28">
-          <h5>Tailwind CSS</h5>
-          <p>
+          <h5 class="font-semibold">Tailwind CSS</h5>
+          <p class="text-sm">
             Diseño rápido, responsive y consistente sin CSS innecesario.
           </p>
         </div>
         <!-- Item 3 -->
         <div class="flex flex-col items-center space-y-5">
           <img src="images/react-svgrepo-com.svg" alt="" class="w-28 h-28">
-          <h5>React</h5>
-          <p>Interfaces reutilizables y escalables basadas en componentes.</p>
+          <h5 class="font-semibold">React</h5>
+          <p class="text-sm">Interfaces reutilizables y escalables basadas en componentes.</p>
         </div>
 
       </div>
