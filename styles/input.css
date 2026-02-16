@@ -2,6 +2,8 @@
 
 @theme {
   --font-sans: "Inter", "sans-serif";
+  --color-softBlue: hsl(231, 69%, 60%);
+  --color-softRed: hsl(0, 94%, 66%);
   /* 
   --breakpoint-sm: 480px;
   --breakpoint-md: 768px;
@@ -18,11 +20,9 @@
   */
 }
 
-/* #hero {
-  background-image: url('../images/coding-hero.mp4');
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+.ficon:hover {
+  filter: invert(13%) sepia(45%) saturate(3303%) hue-rotate(326deg) brightness(101%) contrast(60%);
+}
 
 /* Hamburger Menu */
 .hamburger {
